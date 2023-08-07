@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Query's
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "squery/style.css" %}"/>
+{% endblock %}
+
+{% block content %}
+<div class="main-section">
+    <div class="side-nav">
+        <div class="new-query">
+            <span>Create Query</span>
+        </div>
+        <div class="search-query">
+            <span>Search Query</span>
+        </div>
+        <div class="latest-query">
+            <span>Latest Query</span>
+        </div>
+        <div id="help-query">
+            <span>Help</span>
+        </div>
+        <div id="see-more">
+            <span>See More</span>
+        </div>
+    </div>
+    <div class="post-section">
+        <div class="posts">
+            <div class="post-img">
+                <img src="WhatsApp Image 2023-07-23 at 02.43.08 (1).jpeg">
+            </div>
+            <div class="heading-query">
+                <div>
+                    <p>Query : </p>
+                    <p>Ac is not Working in New Lab lorem21</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-section">
+        <div class="new-query">
+            <span>Create Query</span>
+        </div>
+        <div class="search-query">
+            <span>Search Query</span>
+        </div>
+        <div class="latest-query">
+            <span>Latest Query</span>
+        </div>
+        <div id="help-query">
+            <span>Help</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

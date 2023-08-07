@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "app.css" %}"/>
+    {% block css_files %} {% endblock %}
+</head>
+<body>
+    <header id="main-navigation">
+        <div class="header-section">
+            <h1><a href="{% url "starting-page"%}" >SQuery</a></h1>
+
+            <div class="chat-bot btn">
+                <p><a href="{% url "querys"%}" >Query</a></p>
+            </div>
+            <div class="hot-to btn">
+                <p><a href="{% url "starting-page"%}" >FAQ</a></p>
+            </div>
+            <div class="complain btn">
+                <p><a href="{% url "starting-page"%}" >Chat Bot</a></p>
+            </div>
+            <div class="complain btn">
+                <p><a href="{% url "starting-page"%}" >Feedback</a></p>
+            </div>
+            <div class="login">
+                <p><a href="{% url "starting-page"%}" >logout</a></p>
+            </div>
+            <div style='display: none;'class="toggle_btn">
+                <p><a href="{% url "starting-page"%}" >Toggle</a></p>
+            </div>
+
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static "squery/script.js" %}"/>
+</body>
+</html>
